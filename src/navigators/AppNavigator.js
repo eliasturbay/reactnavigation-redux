@@ -8,8 +8,13 @@ import LoginScreen from '../components/LoginScreen';
 import MainScreen from '../components/MainScreen';
 import ProfileScreen from '../components/ProfileScreen';
 
+const HomeStack = StackNavigator({
+  HomeScreen: { screen: MainScreen },
+  ProfileScreen: { screen: ProfileScreen }
+});
+
 const MainScreenNavigator = TabNavigator({
-  Home: { screen: MainScreen },
+  Home: { screen: HomeStack },
   Profile: { screen: ProfileScreen }
 });
 
